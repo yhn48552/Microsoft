@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/microsoft.css">
+    <title>Document</title>
+    <style>
+        .swiper-button-next,
+        .swiper-button-prev,
+        .swiper-pagination {
+            position: static;
+        }
+
+        .swiper-button {
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 15px;
+
+
+        }
+
+        .swiper-horizontal>.swiper-pagination-bullets,
+        .swiper-pagination-bullets.swiper-pagination-horizontal,
+        .swiper-pagination-custom,
+        .swiper-pagination-fraction {
+            width: 115px;
+
+            margin-top: -15px;
+
+        }
+
+        *:root {
+            --swiper-theme-color: black;
+            --swiper-navigation-size: 25px;
+        }
+
+        .swiper {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <top>
+            <section id="nav">
+                <nav class="container">
+
+                    <div class="choose">
+                        <div class="box logo"><img src="../img/microsoft.png " style="width:100%" alt=""></div>
+                        <a href="">
+                            <div class="box1 box Microsoft">Microsoft 365</div>
+                        </a>
+                        <a href="">
+                            <div class="box1 box office"> Office</div>
+                        </a>
+                        <a href="">
+                            <div class="box1 box windows">Windows</div>
+                        </a>
+                        <a href="">
+                            <div class="box1 box surface">surface</div>
+                        </a>
+                        <a href="">
+                            <div class="box1 box Xbox">Xbox</div>
+                        </a>
+                        <a href="">
+                            <div class="box1 box support">支援</div>
+                        </a>
+                    </div>
+                    <div class="function">
+                        <div class="left">
+                            <input type="checkbox" id="list">
+                            <div class="all"><label for="list">
+                                    <p>所有 Microsoft<i class="triangle2  fa-solid fa-angle-down"></i></p>
+                                </label><label for="list" class=" ham fa-solid fa-bars"></label></div>
+
+                            <ul class="all-list">
+                                <ul class="none">
+                                    <li>Microsoft 365</li>
+                                    <li>Office </li>
+                                    <li>Windows</li>
+                                    <li>Surface</li>
+                                    <li>Xbox</li>
+                                    <li>支援</li>
+                                </ul>
+                                <ul class=all5>
+                                    <input type="checkbox" id="software">
+                                    <label for="software"><span>軟體</span><i
+                                            class="arrow fa-solid fa-angle-down"></i></label>
+
+                                    <ul class="software1">
+                                        <li>Windows 應用程式</li>
+                                        <li>OneDrive</li>
+                                        <li>Outlook</li>
+                                        <li>Skype</li>
+                                        <li>OneNote</li>
+                                        <li>Microsoft Teams</li>
+                                    </ul>
+                                </ul>
+                                <ul class=all5>
+                                    <input type="checkbox" id="computer">
+                                    <label for="computer"><span>個人電腦和設備</span><i
+                                            class="arrow fa-solid fa-angle-down"></i></label>
+                                    <ul class="computer1">
+                                        <li>選購 Xbox</li>
+                                        <li>電腦配件</li>
+                                    </ul>
+                                </ul>
+                                <ul class=all5>
+                                    <input type="checkbox" id="play">
+                                    <label for="play"><span>娛樂</span><i
+                                            class="arrow fa-solid fa-angle-down"></i></label>
+                                    <ul class="play1">
+                                        <li>Xbox Game Pass Ultimate</li>
+                                        <li>Xbox Live Gold</li>
+                                        <li>Xbox 與遊戲</li>
+                                        <li>電腦遊戲</li>
+                                        <li>Windows 遊戲</li>
+                                    </ul>
+                                </ul>
+                                <ul class=all5>
+                                    <input type="checkbox" id="business">
+                                    <label for="business"><span>商務適用</span><i
+                                            class="arrow fa-solid fa-angle-down"></i></label>
+                                    <ul class="business1">
+                                        <li>Microsoft Cloud</li>
+                                        <li>Microsoft 安全性</li>
+                                        <li>Azure</li>
+                                        <li>Dynamics 365</li>
+                                        <li>商務用 Microsoft 365</li>
+                                        <li>Microsoft 產業</li>
+                                        <li>Microsoft Power Platform</li>
+                                        <li>Windows 365</li>
+                                    </ul>
+                                </ul>
+                                <ul class=all5>
+                                    <input type="checkbox" id="people">
+                                    <label for="people"><span>開發人員與 IT</span><i
+                                            class="arrow fa-solid fa-angle-down"></i></label>
+                                    <ul class="people1">
+                                        <li>開發人員中心</li>
+                                        <li>文件</li>
+                                        <li>Microsoft Learn</li>
+                                        <li>Microsoft 技術社群</li>
+                                        <li>Azure Marketplace</li>
+                                        <li>AppSource</li>
+                                        <li>Visual Studio</li>
+                                    </ul>
+                                </ul>
+                                <ul class=all5>
+                                    <input type="checkbox" id="other">
+                                    <label for="other"><span>其他</span><i
+                                            class="arrow fa-solid fa-angle-down"></i></label>
+                                    <ul class="other1">
+                                        <li>Microsoft Rewards</li>
+                                        <li>免費下載與安全性</li>
+                                        <li>教育</li>
+                                        <li>禮品卡</li>
+                                        <li>Licensing</li>
+                                    </ul>
+                                </ul>
+                                <ul class="map">
+                                    <ul class="map2">檢視網站地圖</ul>
+                                    <ul><i class=" right3 fa-solid fa-angle-right"></i></ul>
+                                </ul>
+                            </ul>
+                            <div class="all10">
+                                <div class="triangle"></div>
+                                <a href="">
+                                    <div class="all2">搜尋</i></div>
+                                </a>
+                                <div class="search"><i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="all10">
+                                <a href="">
+                                    <div class="shop car">購物車</div>
+                                </a>
+                                <div class="shop car2"><i class="fa-solid fa-cart-shopping"></i></div>
+                            </div>
+                            <div class="all11">
+                                <div class="shop login">登入</div>
+                                <div class="shop user"><i class="fa-solid fa-circle-user"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+            </section>
+        </top>
+       <mind>
+        <section class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <section id="intro">
+                        <div class="jumbotron">
+                            <picture>
+                                <source srcset="../img/Highlight-Surface-Laptop-Go-2-01-M01_VP2-859x540.jfif"
+                                    media="(max-width: 859px)">
+                                <source srcset="../img/Highlight-Surface-Laptop-Go-2-01-M01_VP3-1083x600.jpg"
+                                    media="(max-width: 1083px)">
+
+                                <source srcset="../img/Highlight-Surface-Laptop-Go-2-01-M01_VP4-1399x600.jpg"
+                                    media="(max-width: 1400px)">
+
+                                <source srcset="../img/Highlight-Surface-Laptop-Go-2-01-M01_VP5-1920x600.jpg"
+                                    media="(max-width: 1920px)">
+                                <img src="../img/Highlight-Surface-Laptop-Go-2-01-M01_VP5-1920x600.jpg"
+                                    style="width:100%">
+                            </picture>
+                        </div>
+                        <div class="container2">
+                            <div class="new">新上市</div>
+                            <h1 class="title">Surface Laptop Go 2</h1>
+                            <p>外型時尚的筆記型電腦配備 12.4 吋觸控螢幕、絕佳的打字體驗，以及改良的 HD 相機</p>
+                            <div class="btn">深入了解</div>
+                        </div>
+                    </section>
+                </div>
+                <div class="swiper-slide">
+                    <section id="intro">
+                        <div class="jumbotron">
+                            <picture>
+                                <source srcset="../img/Surface-Pro8-Hero_VP2-859x540.jpg" media="(max-width: 859px)">
+                                <source srcset="../img/Surface-Pro8-Hero_VP3-1083x600.jpg" media="(max-width: 1083px)">
+
+                                <source srcset="../img/Surface-Pro8-Hero_VP4-1399x600.jpg" media="(max-width: 1400px)">
+
+
+                                <img src="../img/Surface-Pro8-Hero_VP5-1920x600.jpg" style="width:100%">
+                            </picture>
+                        </div>
+                        <div class="container2 surface">
+                            <!-- <div class="new">新上市</div> -->
+                            <h1 class="title">Surface Pro 8</h1>
+                            <p>運用更大的 13 吋觸控螢幕、更快的連線，以及提升的速度，成就更多。現在提供 Windows 11。</p>
+                            <div class="btn">深入了解</div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="swiper-button">
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </section>
+       
+
+        <section id="function">
+            <div class="container3">
+                <div class="card">
+                    <picture><img src="../img/gldn-Quick-Link-Icon-80x80-Microsoft-365 (1).jpg" alt=""></picture>
+                    <span>選擇您的 Microsoft 365</span>
+                </div>
+                <div class="card">
+                    <picture><img src="../img/icon-LL-surface-kickstand-120x120.jpg" alt=""></picture>
+                    <span>選購 Surface 裝置</span>
+                </div>
+                <div class="card">
+                    <picture><img src="../img/gldn-Quick-Link-Icon-80x80-Microsoft-365 (1).jpg" alt=""></picture>
+                    <span>取得 Windows 11</span>
+                </div>
+            </div>
+        </section>
+        <section id="function2">
+
+            <div class="container4">
+                <div class="all-card">
+                    <div class="all ">
+                        <div class="card1">
+                            <picture>
+                                <source srcset="../img/gldn-CP-m365-icons-7up-1668x940.jpg" media="(max-width: 859px)">
+                                <source srcset="../img/gldn-CP-m365-icons-7up-1668x940.jpg" media="(max-width: 1083px)">
+
+                                <source srcset="../img/gldn-CP-m365-icons-7up-1668x940.jpg" media="(max-width: 1400px)">
+
+                                <source srcset="../img/gldn-CP-m365-icons-7up-1668x940.jpg" media="(max-width: 1920px)">
+                                <img src="../img/gldn-CP-m365-icons-7up-1668x940.jpg" style="width:100%">
+                            </picture>
+                        </div>
+                        <h3>Microsoft 365</h3>
+                        <p>進階版 Office 應用程式、額外的雲端儲存空間、進階安全性等功能，全都在一個方便的訂閱中。</p>
+                        <div class="all2">
+                            <div class="all-tra all-tra2">
+                                <span>最多可供六人使用</span>
+                                <div><i class="tra fa-solid fa-angle-right"></i></div>
+                            </div>
+
+                            <div class="all-tra all-tra3">
+                                <span> 適合 1 人使用</span>
+                                <div><i class="tra fa-solid fa-angle-right"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="all ">
+                        <div class="card2">
+                            <picture>
+                                <source srcset="../img/Gldn-mscom-01-Black-Platinum-CP01.jpg"
+                                    media="(max-width: 859px)">
+                                <source srcset="../img/Gldn-mscom-01-Black-Platinum-CP01.jpg"
+                                    media="(max-width: 1083px)">
+
+                                <source srcset="../img/Gldn-mscom-01-Black-Platinum-CP01.jpg"
+                                    media="(max-width: 1400px)">
+
+                                <source srcset="../img/Gldn-mscom-01-Black-Platinum-CP01.jpg"
+                                    media="(max-width: 1920px)">
+                                <img src="../img/Gldn-mscom-01-Black-Platinum-CP01.jpg" style="width:100%">
+                            </picture>
+                        </div>
+                        <h3>Surface Laptop 4</h3>
+                        <p>運用完美結合時尚外型、超薄設計、多工速度和增強效能的裝置，一手包辦。</p>
+                        <div class="all-tra">
+                            <span>立即選購</span>
+                            <div><i class="tra fa-solid fa-angle-right"></i></div>
+                        </div>
+                    </div>
+                    <div class="all ">
+                        <div class="card3">
+                            <picture>
+                                <source srcset="../img/gldn-MSFT-CP-Edge.jpg" media="(max-width: 859px)">
+                                <source srcset="../img/gldn-MSFT-CP-Edge.jpg" media="(max-width: 1083px)">
+
+                                <source srcset="../img/gldn-MSFT-CP-Edge.jpg" media="(max-width: 1400px)">
+
+                                <source srcset="../img/gldn-MSFT-CP-Edge.jpg" media="(max-width: 1920px)">
+                                <img src="../img/gldn-MSFT-CP-Edge.jpg" style="width:100%">
+                            </picture>
+                        </div>
+                        <h3>Microsoft Edge</h3>
+                        <p>在您瀏覽時提供世界級的效能，以及更多的隱私、更充足的生產力與更高的價值。</p>
+                        <div class="all-tra">
+                            <span>立即下載</span>
+                            <div><i class="tra fa-solid fa-angle-right"></i></div>
+                        </div>
+                    </div>
+                    <div class="all ">
+                        <div class="card4">
+                            <picture>
+                                <source srcset="../img/Content-Card-AEM-PC-Game-Pass-Expansion-No-Logo.jpg"
+                                    media="(max-width: 859px)">
+                                <source srcset="../img/Content-Card-AEM-PC-Game-Pass-Expansion-No-Logo.jpg"
+                                    media="(max-width: 1083px)">
+
+                                <source srcset="../img/Content-Card-AEM-PC-Game-Pass-Expansion-No-Logo.jpg"
+                                    media="(max-width: 1400px)">
+
+                                <source srcset="../img/Content-Card-AEM-PC-Game-Pass-Expansion-No-Logo.jpg"
+                                    media="(max-width: 1920px)">
+                                <img src="../img/Content-Card-AEM-PC-Game-Pass-Expansion-No-Logo.jpg"
+                                    style="width:100%">
+                            </picture>
+                        </div>
+                        <h3>PC Game Pass</h3>
+                        <p>解鎖 100 多款精彩遊戲和 EA Play，而且首月只需 NT$30。 此優惠僅適用於新訂閱者。</p>
+                        <div class="all-tra">
+                            <span>立即加入</span>
+                            <div><i class="tra fa-solid fa-angle-right"></i></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="back">
+            <section id="intro2">
+                <div class="jumbotron2">
+                    <picture>
+
+                        <source srcset="../img/gldn-Soft-Hero-OneDriveCampaignRefresh-2_VP2-859x540.jpg"
+                            media="(max-width: 859px)">
+                        <source srcset="../img/gldn-Soft-Hero-OneDriveCampaignRefresh-2_VP3-1083x600.jfif"
+                            media="(max-width: 1083px)">
+
+                        <source srcset="../img/gldn-Soft-Hero-OneDriveCampaignRefresh-2_VP4-1260x600.jfif"
+                            media="(max-width: 1400px)">
+
+                        <img src="../img/gldn-Soft-Hero-OneDriveCampaignRefresh-2_VP5-1596x600.jpg" style="width:100%">
+                    </picture>
+                </div>
+                <div class="container5">
+                    <h2>Microsoft OneDrive</h2>
+                    <p>將檔案和相片儲存到 OneDrive，即可隨時隨地從任何裝置存取</p>
+                    <div class="btn">深入了解</div>
+                </div>
+
+
+            </section>
+            <section id="function3">
+                <div class="container6">
+                    <h2>適用於商務</h2>
+                    <div class="all-card">
+                        <div class="all">
+
+                            <picture><img src="../img/Content-Card-Surface-Laptop-Go-2-03-M01.jpg" alt=""></picture>
+                            <div class="new">新上市</div>
+                            <h3 class="title">Surface Laptop Go 2 商務版</h3>
+                            <p>外型時尚、方便攜帶的筆記型電腦配備絕佳的打字體驗、Windows 11 專業版和專業級效能。</p>
+                            <div class="all-tra ">
+                                <span class="btn">深入了解</span>
+                                <div><i class="tra fa-solid fa-angle-right"></i></div>
+                            </div>
+
+                        </div>
+                        <div class="all">
+                            <picture><img src="../img/gldn-CP-Microsoft-Teams-Commercial.jpg" alt=""></picture>
+                            <h3 class="title2">免費取得 Microsoft Teams</h3>
+                            <p>線上會議、聊天和共用雲端儲存空間，盡在一處。</p>
+                            <div class="all-tra ">
+                                <span class="btn">免費註冊</span>
+                                <div><i class="tra fa-solid fa-angle-right"></i></div>
+                            </div>
+                        </div>
+                        <div class="all">
+                            <picture><img src="../img/gldn-M365-CP-Microsoft365-Commercial.jpg" alt=""></picture>
+                            <h3 class="title2">Microsoft 365 商務版</h3>
+                            <p>透過功能強大的應用程式提高生產力、聯繫和安全，始終領先一步。</p>
+                            <div class="all-tra ">
+                                <span class="btn">立即選購</span>
+                                <div><i class="tra fa-solid fa-angle-right"></i></div>
+                            </div>
+                        </div>
+                        <div class="all">
+                            <picture><img src="../img/Content-Card-Windows-11-Business.jpg" alt=""></picture>
+                            <h3 class="title2">商務用 Windows 11 登場</h3>
+                            <p>專為混合式辦公而設計。 為員工帶來實用性。 為 IT 帶來一致性。 為所有人帶來安全性。</p>
+                            <div class="all-tra ">
+                                <span class="btn">深入了解</span>
+                                <div><i class="tra fa-solid fa-angle-right"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="function4">
+                <div class="container7">
+                    <div>關注 Microsoft </div>
+                    <div class="facebook"><i class="fa-brands fa-facebook-f"></i></div>
+                    <div class="youtube"><i class="fa-brands fa-youtube"></i></div>
+
+                </div>
+
+            </section>
+
+            <div data-aos="fade-up" class="back1">
+                <div><i class=" arrow fa-solid fa-arrow-up"></i></div>
+                <a href="http://127.0.0.1:5500/microsoft/html/microsoft.html"><span>回到頁首</span></a>
+            </div>
+        </div>
+    </mind>
+    <footer>
+        <section id="function5">
+            <div class="footer">
+                <div class="all">
+                    <div class="box1">
+                        <div class="new">最新動向</div>
+                        <ul>
+                            <a href="">
+                                <li>Microsoft 365</li>
+                            </a>
+                            <a href="">
+                                <li>Surface Go</li>
+                            </a>
+                            <a href="">
+                                <li>Surface Book 2</li>
+                            </a>
+                            <a href="">
+                                <li>Surface Pro</li>
+                            </a>
+                            <a href="">
+                                <li>Windows 11 應用程式</li>
+                            </a>
+                        </ul>
+
+                    </div>
+                    <div class="box1">
+                        <div class="new">Microsoft Store</div>
+                        <ul>
+                            <a href="">
+                                <li>帳戶設定檔</li>
+                            </a>
+
+
+                            <a href="">
+                                <li>下載中心</li>
+                            </a>
+
+
+                            <a href="">
+                                <li>Microsoft Store 支援</li>
+                            </a>
+
+
+                            <a href="">
+                                <li>退貨/退款</li>
+                            </a>
+
+
+                            <a href="">
+                                <li>訂單追蹤</li>
+                            </a>
+
+
+                        </ul>
+
+                    </div>
+                    <div class="box1">
+                        <div class="new">教育</div>
+                        <ul>
+                            <a href="">
+                                <li>Microsoft 教育</li>
+                            </a>
+                            <a href="">
+                                <li>教育裝置</li>
+                            </a>
+                            <a href="">
+                                <li>Microsoft Teams 教育版</li>
+                            </a>
+                            <a href="">
+                                <li>Microsoft 365 教育版</li>
+                            </a>
+                            <a href="">
+                                <li>Office 教育版</li>
+                            </a>
+                            <a href="">
+                                <li>教育工作者訓練和發展</li>
+                            </a>
+                            <a href="">
+                                <li>學生和家長優惠</li>
+                            </a>
+                            <a href="">
+                                <li>Azure 學生版</li>
+                            </a>
+                        </ul>
+
+                    </div>
+                    <div class="box1">
+                        <div class="new">商務 </div>
+                        <ul>
+                            <a href="">
+                                <li>Microsoft Cloud</li>
+                            </a>
+                            <a href="">
+                                <li>Microsoft 安全性</li>
+                            </a>
+                            <a href="">
+                                <li>Azure</li>
+                            </a>
+                            <a href="">
+                                <li>Dynamics 365</li>
+                            </a>
+                            <a href="">
+                                <li>Microsoft 365</li>
+                            </a>
+                            <a href="">
+                                <li>Microsoft Advertising</li>
+                            </a>
+                            <a href="">
+                                <li>Microsoft 產業</li>
+                            </a>
+                            <a href="">
+                                <li>Microsoft Teams</li>
+                            </a>
+                        </ul>
+
+                    </div>
+                    <div class="box1">
+                        <div class="new">開發人員與 IT</div>
+                        <ul>
+                            <a href="">
+                                <li>開發人員中心</li>
+                            </a>
+                            <a href="">
+                                <li>文件</li>
+                            </a>
+                            <a href="">
+                                <li>Microsoft Learn</li>
+                            </a>
+                            <a href="">
+                                <li>Microsoft 技術社群</li>
+                            </a>
+                            <a href="">
+                                <li>Azure Marketplace</li>
+                            </a>
+                            <a href="">
+                                <li>AppSource</li>
+                            </a>
+                            <a href="">
+                                <li>Microsoft Power Platform</li>
+                            </a>
+                            <a href="">
+                                <li>Visual Studio</li>
+                            </a>
+                        </ul>
+
+                    </div>
+                    <div class="box1">
+                        <div class="new">公司</div>
+                        <ul>
+                            <a href="">
+                                <li>人才招募</li>
+                            </a>
+                            <a href="">
+                                <li>公司新聞</li>
+                            </a>
+                            <a href="">
+                                <li>Microsoft 隱私權</li>
+                            </a>
+                            <a href="">
+                                <li>投資者</li>
+                            </a>
+                            <a href="">
+                                <li>永續性</li>
+                            </a>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="all2">
+                    <div class="earth">
+                        <div><i class="logo fa-solid fa-earth-americas"></i></div>
+                        <div class="font">中文(台灣)</div>
+                    </div>
+                    <div class="nav">
+                        <ul>
+                            <li>連絡 Microsoft</li>
+                            <li> 隱私權</li>
+                            <li> 使用規定</li>
+                            <li> 商標</li>
+                            <li> 有關我們的廣告訊息</li>
+                            <div class="m">© Microsoft 2022</div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </footer>
+    </header>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
